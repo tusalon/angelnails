@@ -1,22 +1,22 @@
-// sw.js - Service Worker para Salon mechymaria
+// sw.js - Service Worker para Angel Nails
 
-const CACHE_NAME = 'salonmechimaria-v1';
+const CACHE_NAME = 'angelnails-v1';
 const urlsToCache = [
-  '/salonmechimaria/',
-  '/salonmechimaria/index.html',
-  '/salonmechimaria/admin.html',
-  '/salonmechimaria/admin-login.html',
-  '/salonmechimaria/setup-wizard.html',
-  '/salonmechimaria/editar-negocio.html',
-  '/salonmechimaria/manifest.json',
-  '/salonmechimaria/icons/icon-72x72.png',
-  '/salonmechimaria/icons/icon-96x96.png',
-  '/salonmechimaria/icons/icon-128x128.png',
-  '/salonmechimaria/icons/icon-144x144.png',
-  '/salonmechimaria/icons/icon-152x152.png',
-  '/salonmechimaria/icons/icon-192x192.png',
-  '/salonmechimaria/icons/icon-384x384.png',
-  '/salonmechimaria/icons/icon-512x512.png'
+  '/angelnails/',
+  '/angelnails/index.html',
+  '/angelnails/admin.html',
+  '/angelnails/admin-login.html',
+  '/angelnails/setup-wizard.html',
+  '/angelnails/editar-negocio.html',
+  '/angelnails/manifest.json',
+  '/angelnails/icons/icon-72x72.png',
+  '/angelnails/icons/icon-96x96.png',
+  '/angelnails/icons/icon-128x128.png',
+  '/angelnails/icons/icon-144x144.png',
+  '/angelnails/icons/icon-152x152.png',
+  '/angelnails/icons/icon-192x192.png',
+  '/angelnails/icons/icon-384x384.png',
+  '/angelnails/icons/icon-512x512.png'
 ];
 
 // ============================================
@@ -108,7 +108,7 @@ self.addEventListener('fetch', event => {
           }
           // Si no hay cache y es imagen, devolver icon por defecto
           if (event.request.url.match(/\.(jpg|jpeg|png|gif|svg|webp)$/)) {
-            return caches.match('/salonmechimaria/icons/icon-192x192.png');
+            return caches.match('/angelnails/icons/icon-192x192.png');
           }
           return new Response('Error de red', { status: 408 });
         });
@@ -138,6 +138,6 @@ self.addEventListener('message', event => {
   }
 });
 
-console.log('✅ Service Worker configurado para Salon mechymaria');
+console.log('✅ Service Worker configurado para Angel Nails');
 console.log('📦 Cache:', CACHE_NAME);
 console.log('📄 Archivos a cachear:', urlsToCache.length);
