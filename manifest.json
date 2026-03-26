@@ -1,0 +1,22 @@
+{
+  "name": "Salon mechymaria",
+  "short_name": "Salon",
+  "description": "Uñas y belleza - Tu espacio de cuidado personal",
+  "start_url": "/salonmechimaria/",
+  "scope": "/salonmechimaria/",
+  "display": "standalone",
+  "background_color": "#ec4899",
+  "theme_color": "#ec4899",
+  "icons": [
+    {
+      "src": "/salonmechimaria/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/salonmechimaria/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
